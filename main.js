@@ -11,6 +11,24 @@ function toggleDashboard() {
     }
 }
 
+function toggleNav() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("collapsed");
+}
+
+function showDashboard() {
+    const dashboard = document.getElementById("dashboardContent");
+    const home = document.getElementById("homeContent");
+    
+    if(dashboard.style.display === "none") {
+        dashboard.style.display = "flex";
+        home.style.display = "none";
+    } else {
+        dashboard.style.display = "none";
+        home.style.display = "block";
+    }
+}
+
 function viewdetails(id, dob, postal, gender) {
     alert(
         "ID: " + id +

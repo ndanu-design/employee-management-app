@@ -3,21 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Employee Management App</title>
 </head>
 <body>
 <nav>
+    <div class="profile">
+       <img src="images/avatar.png" alt="User">
+        <div class="profile-info">
+        <p class="name">Admin User</p>
+        <p class="status">● Online</p>
+         </div>
+    </div> 
+</div> 
+<div class="nav-menu">
+<button class="nav-toggle" onclick="toggleNav()">☰</button>  
+</div>
     <ul>
+        <li><a href="#" onclick="toggleDashboard(); return false;">Dashboard</a></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="new-contact.html">New Contact</a></li>
         <li><a href="view-contact.html">View Contacts</a></li>
     </ul>
+</div>
 </nav>
-   <div class="container">
-        <h1>Welcome to the Employee Management App</h1><br>
-        <p>This is a simple application to manage employee information. You can add new employees, view existing employees, and keep track of their details.</p>
-        <p>Use the navigation menu above to get started.</p>
-    </div>
+<div class="container">
+       <div class="home-content">
+           <h1>Welcome to the Employee Management App</h1><br>
+            <p>This is a simple application to manage employee information. You can add new employees, view existing employees, and keep track of their details.</p>
+            <p>Use the navigation menu to get started.</p>
+            <a href="view-contact.html" class="start-btn">View Contacts</a>
+       </div>
+        <div class="dashboard">
+            <div class="card bg-blue">
+                <p>Total Employees</p>
+                <h2>5</h2>
+                <div class="more-info">more</div>
+            </div>
+
+            <div class="card bg-green">
+                <p>No of contacts</p>
+                <h2>5</h2>
+                <div class="more-info">more</div>
+            </div>
+        </div>   
+</div>
+    <script src="main.js"></script>
 </body>
 </html>

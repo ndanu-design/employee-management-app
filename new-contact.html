@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>New Contact</title>
 </head>
 <body>
     <nav>
-        <ul>
+        <div class="nav-menu">
+        <button class="nav-toggle" onclick="toggleNav()">☰</button>  
+        </div> 
+        <ul> 
+            <li><a href="#" onclick="toggleDashboard(); return false;">Dashboard</a></li>       
             <li><a href="index.html">Home</a></li>
             <li><a href="new-contact.html">New Contact</a></li>
             <li><a href="view-contact.html">View Contacts</a></li>
         </ul>
+         <div class="profile">
+       <img src="images/avatar.png" alt="User">
+        <div class="profile-info">
+        <p class="name">Admin User</p>
+        <p class="status">● Online</p>
+         </div>
+    </div> 
     </nav>
 
     <div class="container">
         <h1>Add New Contact</h1>
-        <form action="submit-contact.html" method="post">
+        <form action="submit-contact.html" method="post" onsubmit="return saveContact();">
             <label for="IDnumber">ID Number:</label>
             <input type="text" id="IDnumber" name="IDnumber" placeholder="Enter Identification Number"><br><br>
 
@@ -56,5 +67,6 @@
             <input type="submit" value="Add Contact">
         </form>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
